@@ -1,0 +1,12 @@
+server:
+  port: 8081
+security:
+  jwt:
+    public-key: classpath:public.txt
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8080/oauth/userinfo
+      token-info-uri: http://localhost:8080/oauth/check_token
+    client:
+      client-id: clientId
+      client-secret: secret
