@@ -1,0 +1,26 @@
+okta:
+  oauth2:
+    issuer: issuer-url
+    client-id: client-id
+    client-secret: client-secret
+    redirect-uri: /authorization-code/callback
+
+springfox:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /api.html
+
+swagger:
+  security:
+    oauth2:
+      implicit:
+        client-id: client-id
+        client-secret: client-secret
+        authorize-endpoint: auth-endpoint
+        nonce: 123456
+        scopes:
+          - read-tasks
+          - write-tasks
+          - read-persons
+          - write-persons
